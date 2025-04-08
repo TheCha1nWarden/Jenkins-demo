@@ -1,1 +1,1 @@
-# Jenkins-demo
+# Jenkins-pipeline-demo

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smarthome-simple-service-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smarthome-simple-service
+  template:
+    metadata:
+      labels:
+        app: smarthome-simple-service
+    spec:
+      containers:
+        - name: simple-service
+          image: simple-service:latest
+          ports:
+            - containerPort: 8080
